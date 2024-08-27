@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.contact-hero-section {
+  /* background-image: url('/contact-hero-background.png');
+  background-size: cover; */
+  /* height: 100%;
+  min-height: 300px;
+  max-height: 650px; */
+  width: 90%;
+  /* max-width: 1200px; */
+  /* aspect-ratio: 16/9; */
+  margin: 24px auto;
+}
+
+.contact-hero-section p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #b9b9b9;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.contact-hero-section h1 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: sans-serif;
+  margin: 0;
+  margin-bottom: 56px;
+}
+
+.get-in-touch-text {
+  font-family: 'Poppins', sans-serif !important;
+  color: #121212;
+  font-weight: 500;
+  margin-left: 24px;
+}
+
+.get-in-touch-banner {
+  overflow: hidden;
+  background-color: #fff;
+  white-space: nowrap;
+}
+
+.scrolling-content {
+  display: flex;
+  animation: scroll 15s linear infinite;
+}
+
+.get-in-touch-item {
+  display: flex;
+  align-items: center;
+}
+
+.get-in-touch-text {
+  margin-left: 24px;
+  margin-right: 34px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
