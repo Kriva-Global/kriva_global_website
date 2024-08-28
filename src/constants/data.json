@@ -1,8 +1,24 @@
 {
   "social_links": [
     {
+      "title":"Behance",
+      "url":"https://Behance.com"
+    },
+    {
       "title": "Instagram",
       "url": "https://instagram.com"
+    },
+    {
+      "title":"Linkdin",
+      "url":"https://Linkdin.com"
+    },
+    {
+      "title":"facebook",
+      "url":"https://facebook.com"
+    },
+    {
+      "title":"X",
+      "url":"https://X.com"
     }
   ]
 }
