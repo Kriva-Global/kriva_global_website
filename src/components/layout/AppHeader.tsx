@@ -10,8 +10,8 @@ const AppHeader: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <nav className="bg-black text-white py-4 px-4 md:py-6 md:px-8 relative">
-      <div className="container mx-auto flex items-center justify-between">
+    <nav className="bg-black text-white py-4 px-4 md:py-6 md:px-8 sticky top-0 z-50 relative">
+      <div className="container mx-auto flex items-center justify-between ">
         {/* Logo */}
         <div className="flex items-center p-3 space-y-6">
           <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
