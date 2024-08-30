@@ -1,11 +1,13 @@
 import { Outlet } from 'react-router-dom';
+import AppHeader from '../components/layout/AppHeader';
+import AppFooter from '../components/layout/AppFooter';
 
 const Root = () => {
   return (
     <>
-      <h1>Header</h1>
+      <AppHeader />
       <Outlet />
-      <p>footer</p>
+      <AppFooter />
     </>
   );
 };
