@@ -21,9 +21,11 @@ const AppFooter: React.FC = () => {
                 >
                   {e.title}
                 </a>
-                <span className="text-gray-400 ml-72 sm:ml-96 md:ml-96 lg:ml-96 transition-colors duration-300 group-hover:text-[#C4FF65]">
+                <a 
+                href={e.url}
+                className="text-gray-400 ml-72 sm:ml-96 md:ml-96 lg:ml-96 transition-colors duration-300 group-hover:text-[#C4FF65]">
                   ↗
-                </span>
+                </a>
               </div>
               <div className="border-t border-white mt-1 transition-colors duration-300 group-hover:border-[#C4FF65]"></div>
             </div>
@@ -42,8 +44,8 @@ const AppFooter: React.FC = () => {
 
       {/* Bottom Section */}
       <div className="container mx-auto mt-8 pt-4 flex justify-between items-center px-4 md:px-0 text-gray-500 text-right">
-        <div className="flex items-center">
-          <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className="flex items-center p-3 space-y-6">
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 40V0H12.5V18.75L23.75 7.5L32.5 16.25L21.25 27.5H40V40H25L12.5 27.5V40H0Z" fill="#C4FF65"/>
             <path d="M34.2099 6.37074V2.43963H36.0955C36.2944 2.43963 36.4861 2.48757 36.6708
              2.58345C36.859 2.67578 37.0135 2.81428 37.1342 2.99893C37.2585 3.18004 37.3207 3.40376
