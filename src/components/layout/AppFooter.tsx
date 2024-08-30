@@ -1,4 +1,4 @@
-import React from 'react';
+import { MdArrowOutward } from 'react-icons/md';
 import data from '../../constants/data.json';
 
 interface SocialLink {
@@ -8,46 +8,57 @@ interface SocialLink {
 
 const AppFooter: React.FC = () => {
   return (
-    <footer className="bg-black text-white py-8">
-      <div className="container mx-auto flex flex-col md:flex-row-reverse justify-between items-start px-4 md:px-0 space-y-8 md:space-y-0">
+    <footer className='bg-black text-white py-8'>
+      <div className='container mx-auto flex flex-col md:flex-row-reverse justify-between items-start px-4 md:px-0 space-y-8 md:space-y-0'>
         {/* Social Links  */}
-        <div className="flex flex-col space-y-4">
+        <div className='flex flex-col space-y-4'>
           {data.social_links.map((e: SocialLink) => (
-            <div key={e.url} className="relative group">
-              <div className="flex items-center">
+            <div key={e.url} className='relative group'>
+              <div className='flex items-center'>
                 <a
                   href={e.url}
-                  className="flex-grow text-white transition-colors duration-300 group-hover:text-[#C4FF65]"
+                  className='flex-grow text-white transition-colors duration-300 group-hover:text-[#C4FF65]'
                 >
                   {e.title}
                 </a>
-                <a 
-                href={e.url}
-                className="text-gray-400 ml-72 sm:ml-96 md:ml-96 lg:ml-96 transition-colors duration-300 group-hover:text-[#C4FF65]">
-                  ↗
+                <a
+                  href={e.url}
+                  className='text-gray-400 ml-72 sm:ml-96 md:ml-96 lg:ml-96 transition-colors duration-300 group-hover:text-[#C4FF65]'
+                >
+                  <MdArrowOutward />
                 </a>
               </div>
-              <div className="border-t border-white mt-1 transition-colors duration-300 group-hover:border-[#C4FF65]"></div>
+              <div className='border-t border-white mt-1 transition-colors duration-300 group-hover:border-[#C4FF65]'></div>
             </div>
           ))}
         </div>
 
         {/* Contact Information */}
         <div>
-          <h2 className="text-sm text-gray-400 mb-2">NEW BUSINESS</h2>
-          <a href="mailto:work@kriva.global" className="text-2xl underline">
+          <h2 className='text-sm text-gray-400 mb-2'>NEW BUSINESS</h2>
+          <a href='mailto:work@kriva.global' className='text-2xl underline'>
             work@kriva.global
           </a>
-          <p className="text-lg mt-2">+91 - 70019 82394</p>
+          <p className='text-lg mt-2'>+91 - 70019 82394</p>
         </div>
       </div>
 
       {/* Bottom Section */}
-      <div className="container mx-auto mt-8 pt-4 flex justify-between items-center px-4 md:px-0 text-gray-500 text-right">
-        <div className="flex items-center p-3 space-y-6">
-          <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 40V0H12.5V18.75L23.75 7.5L32.5 16.25L21.25 27.5H40V40H25L12.5 27.5V40H0Z" fill="#C4FF65"/>
-            <path d="M34.2099 6.37074V2.43963H36.0955C36.2944 2.43963 36.4861 2.48757 36.6708
+      <div className='container mx-auto mt-8 pt-4 flex justify-between items-center px-4 md:px-0 text-gray-500 text-right'>
+        <div className='flex items-center p-3 space-y-6'>
+          <svg
+            width='36'
+            height='36'
+            viewBox='0 0 40 40'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              d='M0 40V0H12.5V18.75L23.75 7.5L32.5 16.25L21.25 27.5H40V40H25L12.5 27.5V40H0Z'
+              fill='#C4FF65'
+            />
+            <path
+              d='M34.2099 6.37074V2.43963H36.0955C36.2944 2.43963 36.4861 2.48757 36.6708
              2.58345C36.859 2.67578 37.0135 2.81428 37.1342 2.99893C37.2585 3.18004 37.3207 3.40376
               37.3207 3.6701C37.3207 3.93643 37.2567 4.16726 37.1289 4.36257C37.0046 4.55433 36.8448 4.7017
                36.6495 4.80469C36.4577 4.90767 36.2589 4.95916 36.0529 4.95916H34.5934V4.42116H35.8718C36.0529
@@ -67,16 +78,24 @@ const AppFooter: React.FC = () => {
                      1.76669 37.3952 1.45419C36.8732 1.14169 36.2926 0.98544 35.6534 0.98544C35.0142 0.98544 34.4318 
                      1.14169 33.9062 1.45419C33.3842 1.76669 32.967 2.18572 32.6545 2.71129C32.342 3.23331 32.1857 
                      3.81392 32.1857 4.45312C32.1857 5.09233 32.342 5.67472 32.6545 6.20028C32.967 6.7223 33.3842 
-                     7.13956 33.9062 7.45206C34.4318 7.76456 35.0142 7.92081 35.6534 7.92081Z" fill="#C4FF65"/>
+                     7.13956 33.9062 7.45206C34.4318 7.76456 35.0142 7.92081 35.6534 7.92081Z'
+              fill='#C4FF65'
+            />
           </svg>
         </div>
-        
+
         <div>
-          <div className="flex space-x-4 justify-end mt-2 text-sm font-xs">
-            <a href="https://google.com" className="hover:text-gray-400">Index</a>
-            <a href="https://google.com" className="hover:text-gray-400">Privacy Policy</a>
+          <div className='flex space-x-4 justify-end mt-2 text-sm font-xs'>
+            <a href='https://google.com' className='hover:text-gray-400'>
+              Index
+            </a>
+            <a href='https://google.com' className='hover:text-gray-400'>
+              Privacy Policy
+            </a>
           </div>
-          <p className="mt-2 text-xs font-light">© 2024 Kriva Global —— All rights reserved.</p>
+          <p className='mt-2 text-xs font-light'>
+            © 2024 Kriva Global —— All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
