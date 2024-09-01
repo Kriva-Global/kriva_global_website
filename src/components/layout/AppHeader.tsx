@@ -36,18 +36,8 @@ const AppHeader: React.FC = () => {
           className='md:hidden absolute top-6 right-4 w-9 h-9 flex items-center justify-center text-white'
           onClick={() => setIsOpen(!isOpen)}
         >
-          <svg
-            width='36'
-            height='36'
-            viewBox='0 0 24 24'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <path
-              d='M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z'
-              fill='white'
-            />
-          </svg>
+          <img src="/public/toggle-bar.svg" alt="toggle button" />
+
         </button>
         {/* Navigation Links for larger screens */}
         <div className='hidden md:flex md:items-center md:space-x-10'>
@@ -72,9 +62,8 @@ const AppHeader: React.FC = () => {
         </div>
         {/* Full-Screen Blue Overlay */}
         <div
-          className={`fixed inset-0 bg-brand-blue z-40 transition-opacity duration-300 ease-in-out ${
-            isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          } flex flex-col items-start p-3 space-y-6 md:hidden`}
+          className={`fixed inset-0 bg-brand-blue z-40 transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            } flex flex-col items-start p-3 space-y-6 md:hidden`}
         >
           {/* Positioned logo */}
           <div className='flex items-center p-4'>

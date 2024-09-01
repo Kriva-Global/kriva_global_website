@@ -1,0 +1,45 @@
+{
+    "supportNdservice":[
+    {
+      "id": 1,
+      "service": "A new website"
+    },
+    {
+      "id": 2,
+      "service": "Brand Identity Design"
+    },
+    {
+      "id": 3,
+      "service": "Web App Design"
+    },
+    {
+      "id": 4,
+      "service": "Mobile App Design"
+    },
+    {
+      "id": 5,
+      "service": "E-Commerce"
+    },
+    {
+      "id": 6,
+      "service": "UI/UX"
+    },
+    {
+      "id": 7,
+      "service": "Web / App Development"
+    },
+    {
+      "id": 8,
+      "service": "App from scratch"
+    },
+    {
+      "id": 9,
+      "service": "On-going support"
+    },
+    {
+      "id": 10,
+      "service": "Others"
+    }
+]
+}
+  

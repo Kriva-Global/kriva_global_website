@@ -1,6 +1,8 @@
 import { MdArrowOutward } from 'react-icons/md';
 import { ImCross } from "react-icons/im";
 import data4services from '../constants/data4services.json';
+import QuickcallnDRef from '../components/layout/QuickcallnDRef';
+import InfinityBanner from '../components/layout/InfinityBanner';
 
 const Home = () => {
   return (
@@ -19,8 +21,8 @@ const Home = () => {
             Kriva Global®
           </div>
         </div>
-        <div className="relative flex flex-col md:flex-row items-center justify-center text-white mx-4 md:mx-24 mt-24 space-y-4 md:space-y-0">
-          <div className="w-full md:w-5/5">
+        <div className="relative flex flex-col md:flex-row items-center justify-center text-white mx-4 md:mx-24 mt-24 space-y-4  md:space-y-0">
+          <div className="w-full md:w-2/5">
             <p className="text-gray-400 text-xs md:text-sm mb-2">EVERYWHERE</p>
             <h1 className="text-2xl md:text-4xl font-bold mt-4">
               Multi-disciplinary design studio, crafting digital experiences & more.
@@ -35,7 +37,7 @@ const Home = () => {
       </div>
 
       {/* Media Section */}
-      <section className="relative overflow-hidden h-96 md:h-screen">
+      <section className="relative overflow-hidden h-96 md:h-screen ">
         <img
           src="/videoimage.png"
           alt="Video"
@@ -132,44 +134,11 @@ const Home = () => {
           </ul>
         </div>
       </div>
-
-      <div className='get-in-touch-banner bg-white mt-20'>
-        <div className='scrolling-content'>
-          <div className='get-in-touch-item'>
-            <img height={12} width={12} src='/blue-logo.svg' alt='blue logo' />
-            <span className='get-in-touch-text'>GET IN TOUCH</span>
-          </div>
-          <div className='get-in-touch-item'>
-            <img height={12} width={12} src='/blue-logo.svg' alt='blue logo' />
-            <span className='get-in-touch-text'>KRIVA GLOBAL</span>
-          </div>
-        </div>
-      </div>
-      <section className='mx-4 md:mx-24 mt-20 space-y-4'>
-        <div className='text-gray-400 text-xs md:text-sm mb-4'>
-          NOT SURE, IF WE'RE A GOOD FIT?
-        </div>
-        <div className='flex flex-row md:flex-row items-center justify-center text-white mx-4 md:mx-0 space-y-4 md:space-y-0'>
-          <div className='flex flex-col border border-gray-700 p-6 w-full mr-6 md:w-[500px] h-[100px] rounded-lg flex justify-center items-start mt-3.5 md:mt-0'>
-            <div className='flex flex-col w-full text-left'>
-              <p className='text-xs md:text-xl'>Book a 15-min call</p>
-              <p className='text-xs md:text-base'>Get to know how we work and can help you</p>
-            </div>
-          </div>
-          <div className='flex flex-col border border-gray-700 p-6 w-full md:w-[500px] h-[100px] rounded-lg flex justify-center items-start'>
-            <div className='flex flex-col w-full text-left'>
-              <p className='text-xs md:text-xl'>Refer & earn</p>
-              <p className='text-xs md:text-base'>Earn 10% flat commission for each successful referral</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full p-28 flex items-center justify-center overflow-hidden">
-        <div className="flex flex-row text-center text-4xl font-bold">
-          Kriva Global®
-        </div>
-      </section>
+         
+          <InfinityBanner addExtraMargin={true}/>
+         
+     
+      <QuickcallnDRef/>
     </div>
   );
 };
