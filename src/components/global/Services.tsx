@@ -1,6 +1,5 @@
 import { ImCross } from 'react-icons/im';
 import data4services from '../../constants/data4services.json';
-import { MdArrowOutward } from 'react-icons/md';
 import StartProjectBtn from './StartProjectBtn';
 
 const Services = () => {
