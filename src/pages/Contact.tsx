@@ -1,3 +1,6 @@
+import CallToAction from '../components/global/CallToAction';
+import ContactForm from '../components/global/ContactForm';
+
 export const Contact = () => {
   return (
     <section className='contact-page'>
@@ -22,6 +25,8 @@ export const Contact = () => {
           </div>
         </div>
       </div>
+      <ContactForm />
+      <CallToAction />
     </section>
   );
 };
