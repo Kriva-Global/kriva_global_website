@@ -57,7 +57,7 @@ const CustomVideo: React.FC = () => {
       <div className='absolute bottom-4 right-4 flex items-center space-x-2 video-controls'>
         <button
           onClick={togglePlay}
-          className='bg-white h-[37px] w-[37px] text-black  rounded-full'
+          className='bg-white text-black  rounded-full'
         >
           {isPlaying ? '❚❚' : '►'}
         </button>

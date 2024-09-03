@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'NeueMontreal-Regular';
-  src: url('./NeueMontreal-Regular.otf') format('otf');
+  font-family: 'Neue Montreal';
+  src: url('./NeueMontreal-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }

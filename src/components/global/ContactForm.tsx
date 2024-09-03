@@ -26,9 +26,9 @@ const ContactForm = () => {
   // Budget options based on the selected currency
   const budgetOptions: string[] =
     currency === 'INR'
-      ? ['₹50,000', '₹50,000 - ₹1L', '₹1L - ₹3L', '₹3L+']
+      ? ['< ₹50,000', '₹50,000 - ₹1L', '₹1L - ₹3L', '₹3L+']
       : [
-          convertToUSD(50000),
+          `< ${convertToUSD(50000)}`,
           convertToUSD(100000),
           convertToUSD(300000),
           `${convertToUSD(300000)}+`,
@@ -67,8 +67,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className='p-4 md:p-8 lg:p-12 bg-black text-white'>
-      <h2 className='text-2xl font-bold mb-6'>Get in Touch</h2>
+    <div className='p-4 md:p-8 lg:p-12 bg-black font-montreal text-white'>
       <form className='space-y-6' onSubmit={handleSubmit}>
         {/* Currency Selection */}
         <div className='flex items-center justify-between mb-4'>
@@ -76,7 +75,7 @@ const ContactForm = () => {
           <div className='flex ml-4 items-center justify-center overflow-hidden'>
             <label
               className={`px-4 py-2 cursor-pointer ${
-                currency === 'INR' ? ' text-[#C4FF65]' : ' text-white'
+                currency === 'INR' ? ' text-[#C4FF65]' : ' text-gray-300'
               }`}
             >
               <input
@@ -92,7 +91,7 @@ const ContactForm = () => {
             <span>/</span>
             <label
               className={`px-4 py-2 cursor-pointer ${
-                currency === 'USD' ? 'text-[#C4FF65]' : ' text-white'
+                currency === 'USD' ? 'text-[#C4FF65]' : ' text-gray-300'
               }`}
             >
               <input
@@ -115,7 +114,9 @@ const ContactForm = () => {
                 key={option}
                 onClick={() => handleBudgetChange(option)}
                 className={`btn ${
-                  budget === option ? 'bg-[#C4FF65] text-black' : ''
+                  budget === option
+                    ? 'bg-[#C4FF65] text-black'
+                    : 'text-gray-300'
                 }`}
               >
                 {option}
@@ -158,7 +159,9 @@ const ContactForm = () => {
                   key={option}
                   onClick={() => handleInterestChange(option)}
                   className={`btn ${
-                    interests.includes(option) ? 'bg-[#C4FF65] text-black' : ''
+                    interests.includes(option)
+                      ? 'bg-[#C4FF65] text-black'
+                      : 'text-gray-300'
                   }`}
                 >
                   {option}

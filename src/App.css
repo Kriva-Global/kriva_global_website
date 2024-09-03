@@ -20,7 +20,7 @@
 }
 
 .contact-hero-section p {
-  font-family: NeueMontreal-Regular, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: #b9b9b9;
   margin: 0;
@@ -28,7 +28,6 @@
 }
 
 .contact-hero-section h1 {
-  font-family: 'Poppins', sans-serif !important;
   font-size: 30px;
   font-weight: 500;
   font-family: sans-serif;
@@ -37,7 +36,6 @@
 }
 
 .get-in-touch-text {
-  font-family: 'Poppins', sans-serif !important;
   color: #121212;
   font-weight: 500;
   margin-left: 24px;

@@ -7,7 +7,7 @@ interface SocialLink {
 
 const AppFooter: React.FC = () => {
   return (
-    <footer className='bg-black text-white py-8'>
+    <footer className='bg-black text-white py-8 font-montreal'>
       <div className='container mx-auto flex flex-col md:flex-row-reverse justify-between items-start px-4 md:px-0 space-y-8 md:space-y-0'>
         {/* Social Links  */}
         <div className='flex flex-col space-y-4'>
@@ -24,7 +24,7 @@ const AppFooter: React.FC = () => {
                   href={e.url}
                   className='text-white ml-72 sm:ml-96 md:ml-96 lg:ml-96 transition-colors duration-300 group-hover:text-[#C4FF65]'
                 >
-                  <MdArrowOutward className='transition-transform duration-100 group-hover:rotate-45 group-hover:text-[#C4FF65]'/>
+                  <MdArrowOutward className='transition-transform duration-100 group-hover:rotate-45 group-hover:text-[#C4FF65]' />
                 </a>
               </div>
               <div className='border-t border-white mt-1 transition-colors duration-300 group-hover:border-[#C4FF65] '></div>

@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import data from '../../constants/data.json';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 
 interface SocialLink {
@@ -9,10 +9,18 @@ interface SocialLink {
 }
 
 const AppHeader: React.FC = () => {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const closeNavbar = () => {
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
-    <nav className='bg-black text-white py-4 px-4 md:py-6 md:px-8 sticky top-0 z-50 relative'>
+    <nav className='bg-black text-white py-4 px-4 md:py-6 md:px-8 sticky top-0 z-50 relative font-montreal'>
       <div className='container mx-auto flex items-center justify-between '>
         {/* Logo */}
         <div className='flex items-center p-3 space-y-6'>
@@ -38,8 +46,7 @@ const AppHeader: React.FC = () => {
           className='md:hidden absolute top-6 right-4 w-9 h-9 flex items-center justify-center text-white'
           onClick={() => setIsOpen(!isOpen)}
         >
-          <img src="/public/toggle-bar.svg" alt="toggle button" />
-
+          <img src='/toggle-bar.svg' alt='toggle button' />
         </button>
         {/* Navigation Links for larger screens */}
         <div className='hidden md:flex md:items-center md:space-x-10'>
@@ -70,8 +77,9 @@ const AppHeader: React.FC = () => {
         </div>
         {/* Full-Screen Blue Overlay */}
         <div
-          className={`fixed inset-0 bg-brand-blue z-40 transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-            } flex flex-col items-start p-3 space-y-6 md:hidden`}
+          className={`fixed inset-0 bg-brand-blue z-40 transition-opacity duration-300 ease-in-out ${
+            isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          } flex flex-col items-start p-3 space-y-6 md:hidden`}
         >
           {/* Positioned logo */}
           <div className='flex items-center p-4'>
@@ -112,30 +120,34 @@ const AppHeader: React.FC = () => {
               />
             </svg>
           </button>
-          <NavLink
-            to='/'
+          <NavHashLink
+            to='/#home'
+            onClick={closeNavbar}
             className='text-white text-5xl transition-colors duration-300 hover:text-[#C4FF65]'
           >
             Home
-          </NavLink>
-          <a
-            href='#our-work'
+          </NavHashLink>
+          <NavHashLink
+            to='/#our-work'
+            onClick={closeNavbar}
             className='text-white text-5xl transition-colors duration-300 hover:text-[#C4FF65]'
           >
             Our Work
-          </a>
-          <a
-            href='#services'
+          </NavHashLink>
+          <NavHashLink
+            to='/#services'
+            onClick={closeNavbar}
             className='text-white text-5xl transition-colors duration-300 hover:text-[#C4FF65]'
           >
             Services
-          </a>
-          <NavLink
+          </NavHashLink>
+          <NavHashLink
             to='/contact'
+            onClick={closeNavbar}
             className='text-white text-5xl transition-colors duration-300 hover:text-[#C4FF65]'
           >
             Contact
-          </NavLink>
+          </NavHashLink>
           <div className='flex flex-col space-y-4'>
             {data.social_links.map((e: SocialLink) => (
               <div key={e.url} className='relative group'>

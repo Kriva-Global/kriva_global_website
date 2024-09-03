@@ -1,8 +1,14 @@
 import { MdPhone, MdAttachMoney } from 'react-icons/md';
+import ScrollingLogo from './ScrollingLogo';
 
 const CallToAction = () => {
   return (
-    <div className='bg-black text-white py-8'>
+    <div className='bg-black text-white py-8 font-montreal'>
+      <section className='mx-4 md:mx-24 space-y-4'>
+        <div className='text-gray-400 text-xs md:text-sm mb-4'>
+          NOT SURE, IF WE'RE A GOOD FIT?
+        </div>
+      </section>
       <div className='max-w-screen-lg mx-auto grid grid-cols-1 p-2 md:grid-cols-2 gap-4'>
         {/* Call to Action - Book a 15-min call */}
         <div className='border border-gray-700 p-6 rounded-lg flex flex-col justify-between sm:my-2 sm:mx-4'>
@@ -29,24 +35,7 @@ const CallToAction = () => {
       </div>
 
       {/* Scrolling Marquee */}
-      <div className='mt-8 overflow-hidden'>
-        <div className='animate-marquee whitespace-nowrap text-4xl font-bold'>
-          <span className=' inline-block mr-8'>Kriva Global®</span>
-          <span className='inline-block mr-8'>Kriva Global®</span>
-          <span className='inline-block mr-8'>Kriva Global®</span>
-          <span className='inline-block mr-8'>Kriva Global®</span>
-          <span className='inline-block mr-8'>Kriva Global®</span>
-          <span className='inline-block mr-8'>Kriva Global®</span>
-          <span className='inline-block mr-8'>Kriva Global®</span>
-          <span className='inline-block mr-8'>Kriva Global®</span>
-          <span className='inline-block mr-8'>Kriva Global®</span>
-          <span className='inline-block mr-8'>Kriva Global®</span>
-          <span className='inline-block mr-8'>Kriva Global®</span>
-          <span className='inline-block mr-8'>Kriva Global®</span>
-          <span className='inline-block mr-8'>Kriva Global®</span>
-          <span className='inline-block mr-8'>Kriva Global®</span>
-        </div>
-      </div>
+      <ScrollingLogo color='#fff' />
     </div>
   );
 };
