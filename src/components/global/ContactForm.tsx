@@ -7,10 +7,10 @@ const ContactForm = () => {
   const [name, setName] = useState<string>('');
   const [phone, setPhone] = useState<string>('');
   const [email, setEmail] = useState<string>('');
-  const [interests, setInterests] = useState([]);
-  const [timeline, setTimeline] = useState('');
-  const [projectDetails, setProjectDetails] = useState('');
-  const [currency, setCurrency] = useState('INR'); // Default currency is INR
+  const [interests, setInterests] = useState<string[]>([]);
+  const [timeline, setTimeline] = useState<string>('');
+  const [projectDetails, setProjectDetails] = useState<string>('');
+  const [currency, setCurrency] = useState<string>('INR'); // Default currency is INR
 
   // Handler for currency change
   const handleCurrencyChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -18,13 +18,13 @@ const ContactForm = () => {
   };
 
   // Convert prices to USD if needed
-  const convertToUSD = (priceInINR: number) => {
+  const convertToUSD = (priceInINR: number): string => {
     const conversionRate = 0.012; // Example conversion rate, you might want to fetch real-time rates
     return `$${(priceInINR * conversionRate).toFixed(2)}`;
   };
 
   // Budget options based on the selected currency
-  const budgetOptions =
+  const budgetOptions: string[] =
     currency === 'INR'
       ? ['₹50,000', '₹50,000 - ₹1L', '₹1L - ₹3L', '₹3L+']
       : [
