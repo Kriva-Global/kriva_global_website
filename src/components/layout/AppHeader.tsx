@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import data from '../../constants/data.json';
+import { Link, NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 interface SocialLink {
   title: string;
@@ -7,7 +9,7 @@ interface SocialLink {
 }
 
 const AppHeader: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <nav className='bg-black text-white py-4 px-4 md:py-6 md:px-8 sticky top-0 z-50 relative'>
@@ -41,24 +43,30 @@ const AppHeader: React.FC = () => {
         </button>
         {/* Navigation Links for larger screens */}
         <div className='hidden md:flex md:items-center md:space-x-10'>
-          <a
-            href='#home'
+          <NavHashLink
+            to='/#home'
             className='text-white text-xs transition-colors duration-300 hover:text-[#C4FF65]'
           >
             Home
-          </a>
-          <a
-            href='#our-work'
+          </NavHashLink>
+          <NavHashLink
+            to='/#our-work'
             className='text-white text-xs transition-colors duration-300 hover:text-[#C4FF65]'
           >
             Our Work
-          </a>
-          <a
-            href='#services'
+          </NavHashLink>
+          <NavHashLink
+            to='/#services'
             className='text-white text-xs transition-colors duration-300 hover:text-[#C4FF65]'
           >
             Services
-          </a>
+          </NavHashLink>
+          <NavLink
+            to='/contact'
+            className='text-white text-xs transition-colors duration-300 hover:text-[#C4FF65]'
+          >
+            Contact
+          </NavLink>
         </div>
         {/* Full-Screen Blue Overlay */}
         <div
@@ -104,12 +112,12 @@ const AppHeader: React.FC = () => {
               />
             </svg>
           </button>
-          <a
-            href='#home'
+          <NavLink
+            to='/'
             className='text-white text-5xl transition-colors duration-300 hover:text-[#C4FF65]'
           >
             Home
-          </a>
+          </NavLink>
           <a
             href='#our-work'
             className='text-white text-5xl transition-colors duration-300 hover:text-[#C4FF65]'
@@ -122,16 +130,24 @@ const AppHeader: React.FC = () => {
           >
             Services
           </a>
+          <NavLink
+            to='/contact'
+            className='text-white text-5xl transition-colors duration-300 hover:text-[#C4FF65]'
+          >
+            Contact
+          </NavLink>
           <div className='flex flex-col space-y-4'>
             {data.social_links.map((e: SocialLink) => (
               <div key={e.url} className='relative group'>
                 <div className='flex items-center'>
-                  <a
-                    href={e.url}
+                  <Link
+                    to={e.url}
+                    rel='noreffer noopener'
+                    target='_blank'
                     className='flex-grow text-white transition-colors duration-300 group-hover:text-[#C4FF65]'
                   >
                     {e.title}
-                  </a>
+                  </Link>
                   <a
                     href={e.url}
                     className='text-gray-400 ml-72 sm:ml-96 md:ml-96 lg:ml-96 transition-colors duration-300 group-hover:text-[#C4FF65]'
