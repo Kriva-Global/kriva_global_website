@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.input {
+  @apply w-full p-2 bg-black text-white rounded-none border-b border-gray-700 focus:outline-none focus:border-blue-600 transition-colors;
+}
+.btn {
+  @apply px-4 py-2 rounded-full border border-gray-700;
+}
+
+.btn-primary {
+  @apply bg-[#130FD3] text-[#C4FF65] rounded-full px-6 py-3;
+}
+
 body {
   margin: 0;
   background-color: #000;

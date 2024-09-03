@@ -1,6 +1,5 @@
 import { MdArrowOutward } from 'react-icons/md';
 import data from '../../constants/data.json';
-
 interface SocialLink {
   title: string;
   url: string;
@@ -23,12 +22,12 @@ const AppFooter: React.FC = () => {
                 </a>
                 <a
                   href={e.url}
-                  className='text-gray-400 ml-72 sm:ml-96 md:ml-96 lg:ml-96 transition-colors duration-300 group-hover:text-[#C4FF65]'
+                  className='text-white ml-72 sm:ml-96 md:ml-96 lg:ml-96 transition-colors duration-300 group-hover:text-[#C4FF65]'
                 >
-                  <MdArrowOutward />
+                  <MdArrowOutward className='transition-transform duration-100 group-hover:rotate-45 group-hover:text-[#C4FF65]'/>
                 </a>
               </div>
-              <div className='border-t border-white mt-1 transition-colors duration-300 group-hover:border-[#C4FF65]'></div>
+              <div className='border-t border-white mt-1 transition-colors duration-300 group-hover:border-[#C4FF65] '></div>
             </div>
           ))}
         </div>

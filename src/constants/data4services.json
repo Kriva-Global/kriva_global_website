@@ -1,0 +1,24 @@
+{
+    "services": [
+      {
+        "name": "Web Design",
+        "Description": "Creating visually appealing and user-friendly websites tailored to your brand's needs."
+      },
+      {
+        "name": "Mobile & Web Design",
+        "Description": "Designing responsive and intuitive interfaces for both mobile and web applications."
+      },
+      {
+        "name": "Web Development",
+        "Description": "Building and maintaining functional and efficient websites with a focus on performance and scalability."
+      },
+      {
+        "name": "SaaS Development",
+        "Description": "Developing Software as a Service (SaaS) solutions that are scalable, secure, and tailored to business requirements."
+      },
+      {
+        "name": "UI/UX",
+        "Description": "Enhancing user experience and interface design to improve usability and engagement with digital products."
+      }
+    ]
+  }

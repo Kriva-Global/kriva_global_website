@@ -13,7 +13,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand-blue': '#0000FF', // Custom brand blue color
+        'brand-blue': '#0000FF',       // Custom brand blue color
+        'scroll-background': '#DBFF00', // Custom scroll background color
       },
     },
   },
