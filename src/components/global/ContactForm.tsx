@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import { MdArrowOutward } from 'react-icons/md';
 
 const ContactForm = () => {
@@ -13,12 +13,12 @@ const ContactForm = () => {
   const [currency, setCurrency] = useState('INR'); // Default currency is INR
 
   // Handler for currency change
-  const handleCurrencyChange = (e) => {
+  const handleCurrencyChange = (e: ChangeEvent<HTMLInputElement>) => {
     setCurrency(e.target.value);
   };
 
   // Convert prices to USD if needed
-  const convertToUSD = (priceInINR) => {
+  const convertToUSD = (priceInINR: number) => {
     const conversionRate = 0.012; // Example conversion rate, you might want to fetch real-time rates
     return `$${(priceInINR * conversionRate).toFixed(2)}`;
   };
