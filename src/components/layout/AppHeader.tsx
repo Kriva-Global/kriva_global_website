@@ -56,7 +56,7 @@ const AppHeader: React.FC = () => {
             Our Work
           </NavHashLink>
           <NavHashLink
-            href='/#services'
+            to='/#services'
             className='text-white text-xs transition-colors duration-300 hover:text-[#C4FF65]'
           >
             Services
