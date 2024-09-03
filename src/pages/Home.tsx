@@ -2,6 +2,7 @@ import { MdArrowOutward } from 'react-icons/md';
 import { ImCross } from 'react-icons/im';
 import data4services from '../constants/data4services.json';
 import CallToAction from '../components/global/CallToAction';
+import CustomVideo from '../components/global/CustomVideo';
 
 const Home = () => {
   return (
@@ -38,16 +39,7 @@ const Home = () => {
       </div>
 
       {/* Media Section */}
-      <section className='relative overflow-hidden h-96 md:h-screen'>
-        <img
-          src='/videoimage.png'
-          alt='Video'
-          className='w-full h-full object-cover md:h-auto md:relative absolute top-0 left-0'
-        />
-        <div className='absolute bottom-4 left-4 text-white text-lg'>
-          Showreel
-        </div>
-      </section>
+      <CustomVideo />
 
       {/* Our Work Section */}
       <section
