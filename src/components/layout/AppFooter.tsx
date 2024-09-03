@@ -13,10 +13,10 @@ const AppFooter: React.FC = () => {
         <div className='flex flex-col space-y-4'>
           {data.social_links.map((e: SocialLink) => (
             <div key={e.url} className='relative group'>
-              <div className='flex items-center'>
+              <div className='flex items-center '>
                 <a
                   href={e.url}
-                  className='flex-grow text-white transition-colors duration-300 group-hover:text-[#C4FF65]'
+                  className='flex-grow text-white transition-colors  duration-300 group-hover:text-[#C4FF65]'
                 >
                   {e.title}
                 </a>
