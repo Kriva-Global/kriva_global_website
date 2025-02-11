@@ -32,7 +32,7 @@ const Home = () => {
               more.
             </h1>
           </div>
-          <StartProjectBtn width='300px' />
+          <StartProjectBtn />
         </div>
       </div>
 

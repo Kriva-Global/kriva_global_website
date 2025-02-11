@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .paused{
+    animation-play-state:paused;
+  }
+}
 .input {
   @apply w-full p-2 bg-black text-white rounded-none border-b border-gray-700 focus:outline-none focus:border-blue-600 transition-colors;
 }
